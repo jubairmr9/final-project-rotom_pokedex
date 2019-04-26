@@ -16,7 +16,7 @@
         <div id="directory" ng-controller="pokeCtrl">
             <div ng-repeat="x in pokemons">
                 <div style="position:relative;left:10px;top:50px">
-                    <button>{{x.name}}</button>
+                    <button ng-click="selectPokemon(x.id)">{{x.name}}</button>
                 </div>
             </div>
             <div style="position:fixed;height:50px;bottom:0px;left:0px;right:0px;margin-bottom:0px" ng-show="errorMessage != ''">

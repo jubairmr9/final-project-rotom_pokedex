@@ -19,4 +19,14 @@ app.get("/pokemon",function(req,res){
 
 });
 
+app.get("/select",function (req,res) {
+    var id = req.param('id');
+    var sql = "select * from Pokedex.pokemon, Pokedex.pokeType, Pokedex.elements where pokemon.numID="+id+" and pokeType.numID="+id+" and elements.elementID=pokeType.elementID";
+    var result =DBF.query(mysql.format(sql));
+
+    result.then(function (info, error) {
+        res.send(info);
+    })
+})
+
 app.listen(port);

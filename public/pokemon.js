@@ -5,10 +5,12 @@ angular.module('pokedir',[])
 
 function PokeCtrl($scope, pokeApi){
     $scope.pokemons=[]; //Initially all was still
+    $scope.selectedPokemon=[];
 
     $scope.errorMessage='';
     $scope.isLoading=isLoading;
     $scope.refreshPokemon=refreshPokemon;
+    $scope.selectPokemon=selectPokemon;
 
 
     var loading = false;
@@ -16,6 +18,7 @@ function PokeCtrl($scope, pokeApi){
     function isLoading(){
         return loading;
     }
+
     function refreshPokemon(){
         loading=true;
         $scope.errorMessage='';
@@ -30,6 +33,19 @@ function PokeCtrl($scope, pokeApi){
             });
     }
 
+    function selectPokemon(id) {
+        loading=true;
+        $scope.errorMessage='';
+        pokeApi.getSpecific(id)
+            .success(function(data){
+                $scope.selectedPokemon=data;
+                loading=false;
+            })
+            .erroe(function(){
+                $scope.errorMessage="Unable to select Pokemon";
+            });
+    }
+
     refreshPokemon();  //make sure the pokemon are loaded
 }
 
@@ -37,6 +53,10 @@ function pokeApi($http,apiUrl){
     return{
         getPokemon: function(){
             var url = apiUrl + '/pokemon';
+            return $http.get(url);
+        },
+        getSpecific: function (id) {
+            var url =apiUrl + '/select?id='+id;
             return $http.get(url);
         }
     };
