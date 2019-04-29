@@ -36,12 +36,13 @@ function PokeCtrl($scope, pokeApi){
     function selectPokemon(id) {
         loading=true;
         $scope.errorMessage='';
+        $scope.selectedPokemon=[];
         pokeApi.getSpecific(id)
             .success(function(data){
                 $scope.selectedPokemon=data;
                 loading=false;
             })
-            .erroe(function(){
+            .error(function(){
                 $scope.errorMessage="Unable to select Pokemon";
             });
     }

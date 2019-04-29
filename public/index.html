@@ -15,8 +15,8 @@
         <h1>Pokedex</h1>
         <div id="directory" ng-controller="pokeCtrl">
             <div ng-repeat="x in pokemons">
-                <div style="position:relative;left:10px;top:50px">
-                    <button ng-click="selectPokemon(x.id)">{{x.name}}</button>
+                <div id=buttonsstyle="position:relative;left:10px;top:50px">
+                    <button ng-click="selectPokemon(x.numID);">{{x.name}}</button>
                 </div>
             </div>
             <div style="position:fixed;height:50px;bottom:0px;left:0px;right:0px;margin-bottom:0px" ng-show="errorMessage != ''">
