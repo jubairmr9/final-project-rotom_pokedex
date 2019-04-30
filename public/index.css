@@ -1,0 +1,23 @@
+.Logo {
+    height: 100px;
+    width: 300px;
+    transform: rotate(-20deg);
+    position: relative;
+    top: 20px;
+
+}
+
+.headerM {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100px;
+    width: 550px;
+}
+
+
+body {
+    background-image: url("https://wallpapercave.com/wp/cqhO8rQ.jpg");
+    background-position: 100% ;
+}
+
