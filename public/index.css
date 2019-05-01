@@ -15,9 +15,23 @@
     width: 550px;
 }
 
+.buttons {
+    padding:5px;
+}
+
+#pokeInfo {
+    margin: auto;
+    position: fixed;
+    left: 400px;
+    top: 300px;
+    width: 50%;
+    padding: 10px;
+    background-color: black;
+    color:white;
+}
 
 body {
     background-image: url("https://wallpapercave.com/wp/cqhO8rQ.jpg");
-    background-position: 100% ;
+    background-position: 25%;
 }
 

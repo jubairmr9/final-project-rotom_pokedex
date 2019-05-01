@@ -21,13 +21,20 @@
 </head>
 <body ng-app="pokedir">
 <div class="container-fluid">
-        <h1>Pokedex</h1>
+        <!--<h1>Pokedex</h1>-->
         <div id="directory" ng-controller="pokeCtrl">
             <div ng-repeat="x in pokemons">
-                <div id=buttonsstyle="position:relative;left:10px;top:50px">
+                <div class="buttons" style="position:relative;left:10px;top:50px">
                     <button ng-click="selectPokemon(x.numID);">{{x.name}}</button>
                 </div>
             </div>
+
+            <div id="pokeInfo">
+                <p>Pokemon: {{selectedPokemon[0].name}}</p>
+                <p>Elements: {{selectedPokemon[0].element}} {{selectedPokemon[1].element}}</p>
+                <p>Evolution Line: {{selectedPokemon[0].lineName}}</p>
+            </div>
+
             <div style="position:fixed;height:50px;bottom:0px;left:0px;right:0px;margin-bottom:0px" ng-show="errorMessage != ''">
                 <div class="col-sm-12">
                     <h3 class="text-danger">{{errorMessage}}</h3>
