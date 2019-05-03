@@ -31,8 +31,9 @@
 
             <div id="pokeInfo">
                 <p>Pokemon: {{selectedPokemon[0].name}}</p>
-                <p>Elements: {{selectedPokemon[0].element}} {{selectedPokemon[1].element}}</p>
-                <p>Evolution Line: {{selectedPokemon[0].lineName}}</p>
+                <p>Elements: {{selectedPokemon[0].type}} {{selectedPokemon[1].type}}</p>
+                <p>Evolution Line: {{pokeEvo[0][0].lineName}}</p>
+                <p>{{pokeEvo[0][0].name}} -> {{pokeEvo[0][1].name}}, {{pokeEvo[1][1].name}}, {{pokeEvo[2][1].name}} -> {{pokeEvo[0][2].name}}</p>
             </div>
 
             <div style="position:fixed;height:50px;bottom:0px;left:0px;right:0px;margin-bottom:0px" ng-show="errorMessage != ''">

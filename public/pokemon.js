@@ -6,6 +6,7 @@ angular.module('pokedir',[])
 function PokeCtrl($scope, pokeApi){
     $scope.pokemons=[]; //Initially all was still
     $scope.selectedPokemon=[];
+    $scope.pokeEvo=[];
 
     $scope.errorMessage='';
     $scope.isLoading=isLoading;
@@ -37,9 +38,26 @@ function PokeCtrl($scope, pokeApi){
         loading=true;
         $scope.errorMessage='';
         $scope.selectedPokemon=[];
+        $scope.pokeEvo=[];
         pokeApi.getSpecific(id)
             .success(function(data){
-                $scope.selectedPokemon=data;
+                $scope.selectedPokemon=data[0];
+
+                if(data[1][0].lineName=='Eevee'){
+                    if(data[0][0].name==' Vaporeon'){
+                        $scope.pokeEvo[0]=[data[1][0],data[1][1]];
+                    } else if(data[0][0].name==' Jolteon'){
+                        $scope.pokeEvo[0]=[data[1][0],data[1][2]];
+                    } else if(data[0][0].name==' Flareon'){
+                        $scope.pokeEvo[0]=[data[1][0],data[1][3]];
+                    } else {
+                        $scope.pokeEvo[0]=[data[1][0],data[1][1]];
+                        $scope.pokeEvo[1]=[data[1][0],data[1][2]];
+                        $scope.pokeEvo[2]=[data[1][0],data[1][3]];
+                    }
+                } else {
+                    $scope.pokeEvo[0]=data[1];
+                }
                 loading=false;
             })
             .error(function(){
