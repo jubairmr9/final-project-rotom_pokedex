@@ -16,18 +16,25 @@
 }
 
 .buttons {
+    font-family: "Verdana", sans-serif;
     padding:5px;
+
 }
 
 #pokeInfo {
     margin: auto;
+    border-radius: 25px;
     position: fixed;
     left: 400px;
     top: 300px;
-    width: 50%;
+    width: 25%;
     padding: 10px;
-    background-color: black;
-    color:white;
+    background-image: radial-gradient( yellow, #ff9933, #e6e600);;
+    background-color: #e6e600;
+    color: black;
+    font-family: "Verdana", sans-serif;
+    font-style: oblique;
+    opacity: 0.9;
 }
 
 body {
