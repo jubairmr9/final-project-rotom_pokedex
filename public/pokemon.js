@@ -7,6 +7,8 @@ function PokeCtrl($scope, pokeApi){
     $scope.pokemons=[]; //Initially all was still
     $scope.selectedPokemon=[];
     $scope.pokeEvo=[];
+    $scope.weaknesses=[];
+    $scope.strengths=[];
 
     $scope.errorMessage='';
     $scope.isLoading=isLoading;
@@ -39,6 +41,7 @@ function PokeCtrl($scope, pokeApi){
         $scope.errorMessage='';
         $scope.selectedPokemon=[];
         $scope.pokeEvo=[];
+
         pokeApi.getSpecific(id)
             .success(function(data){
                 $scope.selectedPokemon=data[0];
@@ -58,6 +61,8 @@ function PokeCtrl($scope, pokeApi){
                 } else {
                     $scope.pokeEvo[0]=data[1];
                 }
+                $scope.weaknesses=data[2];
+                $scope.strengths=data[3];
                 loading=false;
             })
             .error(function(){

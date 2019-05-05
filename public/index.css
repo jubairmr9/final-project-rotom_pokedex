@@ -21,11 +21,19 @@
 
 }
 
+.weak{
+    display: inline;
+}
+
+.str{
+    display: inline;
+}
+
 #pokeInfo {
     margin: auto;
     border-radius: 25px;
     position: fixed;
-    left: 400px;
+    left: 500px;
     top: 300px;
     width: 25%;
     padding: 10px;
