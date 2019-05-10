@@ -22,12 +22,14 @@ Everyone
   * Gather data
   * Inputs data in pokemon table
 	* Work on Interface
+
 Leah
 	* Create table structure
 	* Fill out evolutionSet table
 	* Make select statement for element weaknesses and strengthes
 	* Alter and Update evolutionSet table to include place
 	* Fix elements table
+
 Liz
   * Create table structure
 	* Fill out evolutions table
@@ -36,12 +38,14 @@ Liz
 	* Create procedure to obtain all info
 		* Make select statement for name and element
 		* make select statement for evolution line
+
 Jubair
 	* Make select statement for element weaknesses and strengthes
 	* Fill out elements table
 	* Fill out pokeType table
 	* Make strength and weakness table
 	* Make table mapping
+
 Sherry
 	* Fix button functionality
 	* Display evolution line
