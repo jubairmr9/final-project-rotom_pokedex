@@ -32,9 +32,9 @@ Leah
 
 Liz
   * Create table structure
-	* Fill out evolutions table
-	* Display evolution line
-		* Figure out eevee exception
+  * Fill out evolutions table
+  * Display evolution line
+    * Figure out eevee exception
   * Create procedure to obtain all info
   * Make select statement for name and element
 	* make select statement for evolution line
