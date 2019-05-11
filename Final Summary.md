@@ -28,4 +28,4 @@
 * We wish we saw the csv files that was already available online earlier. That just opens up door to so many possibilities. Other than
 that we were satisfied with what we have minus a few UI hiccups.
 * We are definitely open to sharing our project with future classes as we believe it has a pretty clear cut structure.
-* A note to future students: if you are banking on the raltional data as much as we were, you probablby should use Neo4J instead of MySQL.
+* A note to future students: if you are banking on the raltional data as much as we were, you probably should use Neo4J instead of MySQL.
