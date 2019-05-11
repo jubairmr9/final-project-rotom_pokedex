@@ -7,9 +7,8 @@
   * Displays the evolution line (if any)
   * Displays the Strengths (according to type)
   * Displays the Weaknesses (according to type)
-* Consists of tables with two or three columns and multiple FOREIGN-KEYS that works best for the project
-* How the tables are connected are detailed here
-* Use of PROCEDURES to fetch the necessary data
+* Consists of tables with two or three columns and multiple `FOREIGN-KEYS` that works best for the project
+* Use of `PROCEDURES` to fetch the necessary data
 * Use of JS, HTML and CSS to display information in the front-end
 
 ### Abstract representation of the data model(s) used
