@@ -1,7 +1,10 @@
 ## Members:
 Elizabeth Stevens 
+
 Leah Judd
+
 Jubair Hassan
+
 Xuejiao Yang (Sherry)
 
 ### Summary:
@@ -15,7 +18,14 @@ It includes:
   * The elements they're weak against
   * The elements they're strong against
 
-All pokemon are listed as a button and the info is visible once a button is clicked.
+It consists of consists of tables with two or three columns and multiple `FOREIGN-KEYS` that works best for the project.
+
+
+How the tables are connected are detailed [here](https://docs.google.com/drawings/d/1QFOMXx1jJfyQtt-R1Y13q3hGM5iva56B8hARUWqJC00/edit).
+
+Our project uses `PROCEDURES` to fetch the necessary data, and uses JS, HTML and CSS to display information in the front-end.
+
+In the UI, all the pokemon are listed as a button and the info is visible once a button is clicked.
  
 ### Contributions
 Everyone
